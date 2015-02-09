@@ -1,0 +1,28 @@
+    <div class="container">
+
+      <form class="form-signin" role="form" action="/adduser" method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputName" class="sr-only">Username</label>
+        <input type="text" id="inputName"  name="uName" class="form-control" placeholder="Username" required autofocus>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" name="UserId" class="form-control" placeholder="Email address" required>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" name="Password" class="form-control" placeholder="Password" required>
+          <label for="inputcPassword" class="sr-only">Confirm Password</label>
+        <input type="password" id="inputcPassword" name="cPassword" class="form-control" placeholder="Confirm Password" required>
+          <div class="container">
+            <label for="">Gender:</label> <input type="radio" name="gender">Male<input type="radio" name="gender">Female
+          </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>

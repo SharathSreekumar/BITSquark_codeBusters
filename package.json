@@ -1,0 +1,24 @@
+{
+  "name": "NodejsStarterApp",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "description": "A sample nodejs app for Bluemix",
+  "dependencies": {
+    "body-parser": "^1.11.0",
+    "cheerio": "^0.18.0",
+    "cloudant": "^1.0.0-beta3",
+    "express": "^3.4.7",
+    "hbs": "^2.8.0",
+    "jade": "1.1.4",
+    "mongodb": "*",
+    "mongoose": "^3.8.23",
+    "path": "^0.11.14",
+    "request": "^2.53.0"
+  },
+  "engines": {
+    "node": "0.10.*"
+  },
+  "repository": {}
+}

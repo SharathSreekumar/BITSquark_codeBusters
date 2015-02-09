@@ -1,0 +1,16 @@
+html, body{
+height:100%;
+    width:100%
+}
+
+#intro{
+background: url('buz.jpg');
+    height: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+position:relative;
+    
+}

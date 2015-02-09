@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BlueBus</title>
+    <!-- Bootstrap -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../dist/css/style.css" rel="stylesheet">
+    <link href="../txtdesign.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+    <body>
+        <form action="/admin" method="post">
+            <input type="text" class="form-control inpsize form-control1" name="operator" placeholder="Operator"><br>
+            <input type="text" class="form-control inpsize form-control1" name="bustype" placeholder="Bus-type"><br>
+            <input type="text" class="form-control inpsize form-control1" name="src1" placeholder="Source1"> <input type="time" class="form-control inpsize form-control1" name="dept1"><br>
+            <input type="text" class="form-control inpsize form-control1" name="src2" placeholder="Source2"> <input type="time" class="form-control inpsize form-control1" name="dept2"><br>
+            <input type="text" class="form-control inpsize form-control1" name="src3" placeholder="Source3"> <input type="time" class="form-control inpsize form-control1" name="dept3"><br>
+            <input type="text" class="form-control inpsize form-control1" name="dest1" placeholder="Destination1"> <input type="time" class="form-control inpsize form-control1" name="arr1"><br>
+            <input type="text" class="form-control inpsize form-control1" name="dest2" placeholder="Destination2"><input type="time" class="form-control inpsize  form-control1" name="arr2"><br>
+            <input type="text" class="form-control inpsize form-control1" name="dest3" placeholder="Destination3"> <input type="time" class="form-control inpsize form-control1" name="arr3"><br>
+            <input type="number" class="form-control inpsize form-control1" name="cost" min="0" max="5000"><br>
+            <input type="submit" class="form-control inpsize form-control1" value="Store">
+        </form>
+        <script src="../dist/js/jquery-1.11.2.min.js"></script>
+        <script src="../dist/js/bootstrap.min.js"></script>
+        <script src="../scroll.js"></script>
+    </body>
+</html>
