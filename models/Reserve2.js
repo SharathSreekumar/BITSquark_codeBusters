@@ -1,9 +1,9 @@
-var mongodb = require('mongodb');
-//var mongoose=require('mongoose');
+//var mongodb = require('mongodb');
+var mongoose = require('mongoose');
 //var bcrypt=require('bcrypt-nodejs');
 //var crypto=require('crypto');
 
-var reserveSchema = new mongodb.Schema({
+var reserveSchema = new mongoose.Schema({
     id:Number,
     travllerN:String,
     travellerA:Number,
@@ -17,4 +17,4 @@ var reserveSchema = new mongodb.Schema({
     mobileNo:Number
 });
 
-module.exports = mongodb.model('Reserve',reserveSchema);
+module.exports = mongoose.model('Reserve',reserveSchema);

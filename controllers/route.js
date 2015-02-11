@@ -1,9 +1,14 @@
 var express = require('express');
 var request = require('request');
 var cheerio = require('cheerio');
-//var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
 var routeModel = require('../models/Route2');
+
+/*mongoose.connect('mongodb://localhost:27017/travel2');
+mongoose.connection.on('error',function(){
+    console.error('MongoDb is not connected. Check if Mongod is running.');
+});*/
 
 exports.initPage = function(req,res){
     res.render('index');
@@ -14,7 +19,7 @@ exports.createRoute = function(req,res){
 }
 
 exports.postNewRoute = function(req,res){    // this function is to store value using 'post' operation   
-    /*var routee = new routeModel();
+    var routee = new routeModel();
     routee.operator = req.body.operator;
     routee.busType = req.body.bustype;
     routee.src1 = req.body.src1;
@@ -30,23 +35,7 @@ exports.postNewRoute = function(req,res){    // this function is to store value 
     routee.dest3 = req.body.dest3;
     routee.arr3 =req.body.arr3;
     routee.price = req.body.cost;
-    routee.save();*/
-    
-    require('mongodb').connect(mongo.url, function(err, conn) {
-      var collection = conn.collection('route');
-
-      // create message record
-      var parsedUrl = require('url').parse(req.url, true);
-      var queryObject = parsedUrl.query;
-      //var name = (queryObject["name"] || 'Bluemix');
-      //var message = { 'message': 'Hello, ' + name, 'ts': new Date() };
-      collection.insert(message, {safe:true}, function(err){
-         if (err) { console.log(err.stack); }
-         //res.writeHead(200, {'Content-Type': 'text/plain'});
-         res.write(JSON.stringify(message));
-         res.end('\n');
-      });
-   });
+    routee.save();
 }
 
 exports.displayAllRoute = function(req,res){
@@ -87,3 +76,21 @@ exports.displayRoute = function(req,res){
         }
     });
 }
+
+/*
+require('mongodb').connect(mongo.url, function(err, conn) {
+      var collection = conn.collection('route');
+
+      // create message record
+      var parsedUrl = require('url').parse(req.url, true);
+      var queryObject = parsedUrl.query;
+      //var name = (queryObject["name"] || 'Bluemix');
+      var message = { 'message': req.body.arr3 + name, 'ts': new Date() };
+      collection.insert(message, {safe:true}, function(err){
+         if (err) { console.log(err.stack); }
+         //res.writeHead(200, {'Content-Type': 'text/plain'});
+         res.write(JSON.stringify(message));
+         res.end('\n');
+      });
+   });
+}*/

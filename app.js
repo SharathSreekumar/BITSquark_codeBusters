@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded(
 app.use(express.static('public'));
 //mongoose
 
-if (process.env.VCAP_SERVICES) {
+/*if (process.env.VCAP_SERVICES) {
    var env = JSON.parse(process.env.VCAP_SERVICES);
    var mongo = env['mongodb-2.4'][0].credentials;
 } else {
@@ -41,10 +41,10 @@ if (process.env.VCAP_SERVICES) {
       "password" : "secret",
       "url" : "mongodb://bluebus:secret@localhost:27017/test"
    }
-};
+};*/
 
-require('mongodb').connect('mongodb://localhost:27017/travel2');
-require('mongodb').connection.on('error',function(){
+mongoose.connect('mongodb://localhost:27017/travel2');
+mongoose.connection.on('error',function(){
     console.error('MongoDb is not connected. Check if Mongod is running.');
 });
 

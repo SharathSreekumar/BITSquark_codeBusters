@@ -1,5 +1,7 @@
-var mongodb = require('mongodb');
-var routeSchema = new mongodb.Schema({
+//var mongodb = require('mongodb');
+var mongoose = require('mongoose');
+
+var routeSchema = new mongoose.Schema({
     id:Number,
     operator:String,
     busType:String,
@@ -18,4 +20,4 @@ var routeSchema = new mongodb.Schema({
     price:Number
 });
 
-module.exports = mongodb.model('Route',routeSchema);
+module.exports = mongoose.model('Route',routeSchema);

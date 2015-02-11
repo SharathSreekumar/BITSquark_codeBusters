@@ -129,7 +129,7 @@
     
     <div class="container">
       <div class="navbar-header">
-        <div class="navbar-toggle .navbar-collapse .pull-right " data-toggle="collapse" data-target="#navbar-collapse-1"  > <span>Menu</span>
+        <div class="navbar-toggle navbar-collapse pull-right " data-toggle="collapse" data-target="#navbar-collapse-1"  > <span>Menu</span>
           <button type="button" > <i class="fa fa-bars"></i></button>
         </div>
       </div>
@@ -451,7 +451,7 @@
 <div class="clearfix"></div>
 
 <div class="feature_section1" id="nextdiv">
-<div class="container">
+<div class="container col-xs-12">
 
 	<h2>
     Search for buses here: 
@@ -461,9 +461,9 @@
     <div class="container ima1">
             <div class="container">
                 <h1>Book Bus Tickets Online with Zero Booking Fees</h1>
-                <div class="form-group col-sm-6"><hr>
+                <div class="form-group col-sm-6 col-xs-12"><hr>
                     <form action="/search" class="navbar-form navbar-left" method="post">
-                        <label>FROM:</label> <label>TO:</label><br>
+                        <label>FROM:</label>
                         <select name="start" class="form-control inpsize"> 
                             <option value="">Starting Point</option> 
                             <option value="Banglore">Banglore</option> 
@@ -472,6 +472,8 @@
                             <option value="Mumbai">Mumbai</option> 
                         </select>
                         
+                        <br>
+                        <label>TO:</label>
                         <select name="ending" class="form-control inpsize"> 
                             <option value="">Ending Point</option> 
                             <option value="Banglore">Banglore</option> 
@@ -486,16 +488,14 @@
                       <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i> Search Bus</button>
                     </form>
                 </div>
-                <div class="form-group col-sm-6"><hr>
+                <div class="form-group col-sm-6 col-xs-12"><hr>
                     <br><br><br><br>
                     <form action="/all">
                         <button type="submit" class="btn btn-default" href="/all"><i class="glyphicon glyphicon-search"></i> View All</button>
                     </form>
             </div>
         </div>
-    
-    
-</div>
+    </div>
 </div><!-- end features section1 -->
 
 
